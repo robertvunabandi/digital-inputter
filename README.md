@@ -1,6 +1,6 @@
 # README
 
-DigitalInputter helps with simple logic computations.
+`DigitalInputter` helps with simple logic computations.
 
 Given a raw input, such as `(!A)^(B\*X)`, this will output the expression. For instance, given input `[0,0,0]`, the output here would be `1`.
 
