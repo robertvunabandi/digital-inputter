@@ -15,6 +15,9 @@ class Expression:
     - Raw: The single string that represents a boolean logic
         expression that is to be parsed into an Expression ASA. For
         example, "A*(B*(!C))"
+    - Parsed Expression: An expression that is parsed as specified by
+        the Expression.parse. For instance, "A*B" is parsed into 
+        [42, 'A', 'B'], which is the Parsed Expression for that Raw
     - Letter: A letter of the alphabet
     - Operators: Boolean operators. * for AND, + for OR, ! for NOT.
 
