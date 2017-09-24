@@ -4,7 +4,7 @@ a = DigitalInputer("(!A)^(B*X)")
 print(a.getOuputTablePrintReady())
 
 """
-The operation given about is NOT(A) XOR (B AND X)
+The operation given above is NOT(A) XOR (B AND X)
 
 Prints the following ouput:
 A B X | OUT
