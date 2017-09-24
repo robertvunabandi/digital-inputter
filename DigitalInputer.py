@@ -36,7 +36,6 @@ class DigitalInputer:
         is an expression as defined in Expression.py
         """
         self.expression = Expression(raw)
-        self.expression.varsSorted
     
     def getOutput(self, array):
         """
