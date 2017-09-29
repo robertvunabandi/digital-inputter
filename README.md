@@ -25,11 +25,11 @@ The class `DigitalInputer` takes in as input a `Raw` expression, as detailed bel
 
 - **`ASA`**: replaces "as stated above". This is to make it apparent that we're referencing a variable in this naming convention.
 - **`Value`**: Alphabetical letter
-- **`Expression`**: Either a Value ASA or a parsed valued array, such as `[33, 'A']` or `[42, 'A', 'B']` `(NOT A)` and `(A AND B)` respectively.
+- **`Expression`**: Either a Value ASA or a parsed valued array, such as `[33, 'A']` or `[42, 'A', 'B']` **`(NOT A)`** and **`(A AND B)`** respectively.
 - **`Raw`**: The single string that represents a boolean logic expression that is to be parsed into an Expression ASA. For example, `A*(B*(!C))`.
-- **`Parsed` Expression**: An expression that is parsed as specified by the Expression.parse. For instance, `A*B` is parsed into `[42, 'A', 'B']`, which is the Parsed Expression for that Raw.
+- **`Parsed Expression`**: An expression that is parsed as specified by the Expression.parse. For instance, `A*B` is parsed into `[42, 'A', 'B']`, which is the Parsed Expression for that Raw.
 - **`Letter`**: A letter of the alphabet
-- **`Operators`**: Boolean operators. `*` for `AND`, `+` for `OR`, `!` for `NOT`.
+- **`Operators`**: Boolean operators. `*` for **`AND`**, `+` for **`OR`**, `!` for **`NOT`**.
 
 ### The Raw ASA string has to follow some guidelines
 
@@ -38,7 +38,7 @@ The class `DigitalInputer` takes in as input a `Raw` expression, as detailed bel
 - (2) All of the `O` have to be the same, or else it will raise a SyntaxError. Remember, it's recursive, so for any `L`, all of the `O` have to be the same still but they can be different than the main `O`. 
 - (3) Following from (2), in order to write a NOT expression, it needs to always be enclosed in Parenthesis unless it's the global thing to be NOTed. For instance, `!A` (global) or `A+(!(A+B))` (not global).
 - (4) Some advanced operations require only 2 `L`'s: those are `IFF` and `IMPLIES` operations.
-- (**`@`**) an exception to this rule is the `NOT` operator `!` as shown in the given example.
+- (**`@`**) an exception to this rule is the **`NOT`** operator `!` as shown in the given example.
 
 ### Symbols to operation
 
