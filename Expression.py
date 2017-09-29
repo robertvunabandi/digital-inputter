@@ -204,10 +204,10 @@ class Expression:
         return current_index
 
     def __str__(self):
-        return str(self.parsed)
+        return str(self.raw)
 
     def __repr__(self):
-        return str(self.parsed)
+        return str(self.raw)
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):

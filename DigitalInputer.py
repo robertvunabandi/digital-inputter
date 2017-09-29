@@ -192,4 +192,45 @@ class DigitalInputer:
         Prints the output table
         """
         print(self.getOuputTablePrintReady())
+
+    def __str__(self):
+        return str(self.expression.raw)
+
+    def __repr__(self):
+        return str(self.expression.raw)
+
+    def __eq__(self, other):
+        if type(other) == str:
+            # assumes that other is just a string of raw
+            # and self with the DigitalInputer of other
+            return self == DigitalInputer(other)
+        if isinstance(other, self.__class__):     
+            # we need to compare both outputs and string raw   
+            return self.__areRawEqual(other) or self.__areOutputsEqual(other)
+        return False
+
+    def __areRawEqual(self, other):
+        return self.expression.raw == other.expression.raw
+
+    def __areOutputsEqual(self, other):
+        # pre-compute the dictionaries because they
+        # may take a long time to compute
+        other_output = other.getTableOutputDictionary()
+        other_output_keys = other_output.keys()
+        self_output = self.getTableOutputDictionary()
+
+        for key in other_output_keys:
+            # try/except KeyError because if other has
+            # more or less variables than A, so its 
+            # inputs tuples will definitely not be part
+            # of the dictionary from self
+            try:
+                if self_output[key] != other_output[key]:
+                    return False
+            except KeyError:
+                return False
+        return True
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
         

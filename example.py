@@ -18,3 +18,9 @@ A B X | OUT
 1 1 1 | 1
 """
 
+A = DigitalInputer("(!A)*(!B)")
+B = DigitalInputer("!(A+B)")
+C = "!(A+B)"
+print(A == B) # True
+print(A == C) # True
+print(B == C) # True
