@@ -3,3 +3,6 @@ DigitalInputer.pyc
 Expression.pyc
 ExpressionAsserter.pyc
 6004.py
+logs.txt
+.idea
+__pycache__

@@ -1,7 +1,7 @@
 from DigitalInputer import DigitalInputer
 
 a = DigitalInputer("(!A)^(B*X)")
-print(a.getOuputTablePrintReady())
+print(a.get_output_table_print_ready())
 
 """
 The operation given above is NOT(A) XOR (B AND X)
