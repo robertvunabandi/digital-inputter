@@ -62,7 +62,7 @@ class DigitalInputer:
 		"""
 		operation = DigitalInputer.__get_operation(parsed_expression)
 		inputs = self.__get_digital_inputs(input_array, parsed_expression)
-		return AdvancedOperation.getOutput(operation, inputs)
+		return AdvancedOperation.get_output(operation, inputs)
 
 	@staticmethod
 	def __get_operation(parsed_expression):
