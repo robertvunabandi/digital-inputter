@@ -40,7 +40,7 @@ The class `DigitalInputer` takes in as input a `Raw` expression, as detailed bel
 - (4) Some advanced operations require only 2 `L`'s: those are `IFF` and `IMPLIES` operations.
 - (**`@`**) an exception to this rule is the **`NOT`** operator `!` as shown in the given example.
 
-### Symbols to operation
+### Operation Symbols 
 
 - `!` means **`NOT`**
 - `$` means **`NOR`**
