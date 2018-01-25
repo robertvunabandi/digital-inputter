@@ -6,16 +6,16 @@ Given a raw input, such as `(!A)^(B*X)`, this will output the expression. For in
 
 This can work for any arbitrary length input with maximum 26 inputs (26 letters, one shouldn't need that much anyway). One can also print a table. For the input given above, the table output would be:
 
-| A B X | OUT |
-| ----- | --- |
-| 0 0 0 | 1 |
-| 0 0 1 | 1 |
-| 0 1 0 | 1 |
-| 0 1 1 | 0 |
-| 1 0 0 | 0 |
-| 1 0 1 | 0 |
-| 1 1 0 | 0 |
-| 1 1 1 | 1 | 
+| A | B | X | OUT |
+| - | - | - | --- |
+| 0 | 0 | 0 |  1  |
+| 0 | 0 | 1 |  1  |
+| 0 | 1 | 0 |  1  |
+| 0 | 1 | 1 |  0  |
+| 1 | 0 | 0 |  0  |
+| 1 | 0 | 1 |  0  |
+| 1 | 1 | 0 |  0  |
+| 1 | 1 | 1 |  1  | 
 
 ## Details
 
