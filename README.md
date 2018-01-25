@@ -40,6 +40,70 @@ The class `DigitalInputer` takes in as input a `Raw` expression, as detailed bel
 - (4) Some advanced operations require only 2 `L`'s: those are `IFF` and `IMPLIES` operations.
 - (**`@`**) an exception to this rule is the **`NOT`** operator `!` as shown in the given example.
 
+### Examples
+
+`DigitalInputer` offers four main method:
+- `get_output(input_array)`: Returns the output for a given set of inputs.
+- `print_output_table()`: Prints the table returned by `get_output_table_print_ready()` below.
+- `get_output_table_print_ready()`: Returns a table showing all the different combinations of inputs and their outputs, which can be stored in a variable.
+- `get_table_output_dictionary()`: Gets a dictionary showing all the different combinations of inputs and their outputs via keys as tuples of input and values as outputs of those inputs.
+
+Here's a simple example for `A OR B`:
+```python
+from DigitalInputer import DigitalInputer
+A = DigitalInputer("A+B")  // A OR B
+print(A.get_output([0,0])) // 0, the first argument in the array is for A
+print(A.get_output([0,1])) // 1
+print(A.get_output([1,0])) // 1
+print(A.get_output([1,1])) // 1
+```
+
+The input of the array with the method `get_output` are alphabetical no matter what:
+```python
+B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+print(A.get_output([0,0])) // 0, the first argument in the array is for A
+print(A.get_output([0,1])) // 1
+print(A.get_output([1,0])) // 0
+print(A.get_output([1,1])) // 1
+
+```
+
+You can also see tables with their values with the method `print_output_table`:
+```python
+B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+B.print_output_table()
+"""
+prints the following:
+A B | OUT
+0 0 | 0
+0 1 | 1
+1 0 | 0
+1 1 | 1
+"""
+```
+
+You can even get the table as a string with `get_output_table_print_ready`:
+```python
+B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+string_table = B.get_output_table_print_ready()
+print(string_table)
+"""
+prints the following:
+A B | OUT
+0 0 | 0
+0 1 | 1
+1 0 | 0
+1 1 | 1
+"""
+```
+
+What if you want to save it in a different format? You can get a python `dictionary` with the method `print_output_table`:
+
+```python
+B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+print(B.print_output_table()) // {(0, 1): 1, (1, 0): 0, (0, 0): 0, (1, 1): 1}
+```
+
 ### Operation Symbols 
 
 - `!` means **`NOT`**
