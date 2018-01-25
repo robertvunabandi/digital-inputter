@@ -1,8 +1,13 @@
 BasicOperation.pyc
+lib/BasicOperation.pyc
 DigitalInputer.pyc
+lib/DigitalInputer.pyc
 Expression.pyc
+lib/Expression.pyc
 ExpressionAsserter.pyc
+lib/ExpressionAsserter.pyc
 6004.py
 logs.txt
 .idea
 __pycache__
+.gitignore

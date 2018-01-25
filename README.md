@@ -81,6 +81,14 @@ B = DigitalInputer("B+(A*B)") # B OR (A AND B)
 print(B.print_output_table()) # {(0, 1): 1, (1, 0): 0, (0, 0): 0, (1, 1): 1}
 ```
 
+This also supports equality checks (i.e. checking if two expressions are equivalent):
+
+```python
+a = DigitalInputer("!(A + B)")
+b = DigitalInputer("(!A)*(!B)")
+print(a == b) # True
+```
+
 ## Details
 
 The class `DigitalInputer` takes in as input a `Raw` expression, as detailed below. That expression would be the entry point for this class. 

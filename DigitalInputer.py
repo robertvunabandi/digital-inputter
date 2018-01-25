@@ -1,6 +1,5 @@
-from Expression import Expression
-from BasicOperation import AdvancedOperation
-
+from lib.Expression import Expression
+from lib.BasicOperation import AdvancedOperation
 
 class DigitalInputer:
 	"""
