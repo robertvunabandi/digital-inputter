@@ -1,3 +1,4 @@
+.gitignore
 BasicOperation.pyc
 lib/BasicOperation.pyc
 DigitalInputer.pyc
@@ -11,4 +12,3 @@ lib/__init__.pyc
 logs.txt
 .idea
 __pycache__
-.gitignore
