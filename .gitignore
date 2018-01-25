@@ -6,6 +6,7 @@ Expression.pyc
 lib/Expression.pyc
 ExpressionAsserter.pyc
 lib/ExpressionAsserter.pyc
+lib/__init__.pyc
 6004.py
 logs.txt
 .idea
