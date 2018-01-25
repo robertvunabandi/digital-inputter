@@ -1,4 +1,4 @@
-from DigitalInputer import DigitalInputer
+from lib.DigitalInputer import DigitalInputer
 
 a = DigitalInputer("(!A)^(B*X)")
 print(a.get_output_table_print_ready())
