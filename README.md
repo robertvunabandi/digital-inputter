@@ -51,26 +51,26 @@ The class `DigitalInputer` takes in as input a `Raw` expression, as detailed bel
 Here's a simple example for `A OR B`:
 ```python
 from DigitalInputer import DigitalInputer
-A = DigitalInputer("A+B")  // A OR B
-print(A.get_output([0,0])) // 0, the first argument in the array is for A
-print(A.get_output([0,1])) // 1
-print(A.get_output([1,0])) // 1
-print(A.get_output([1,1])) // 1
+A = DigitalInputer("A+B")  # A OR B
+print(A.get_output([0,0])) # 0, the first argument in the array is for A
+print(A.get_output([0,1])) # 1
+print(A.get_output([1,0])) # 1
+print(A.get_output([1,1])) # 1
 ```
 
 The input of the array with the method `get_output` are alphabetical no matter what:
 ```python
-B = DigitalInputer("B+(A*B)") // B OR (A AND B)
-print(A.get_output([0,0])) // 0, the first argument in the array is for A
-print(A.get_output([0,1])) // 1
-print(A.get_output([1,0])) // 0
-print(A.get_output([1,1])) // 1
+B = DigitalInputer("B+(A*B)") # B OR (A AND B)
+print(A.get_output([0,0])) # 0, the first argument in the array is for A
+print(A.get_output([0,1])) # 1
+print(A.get_output([1,0])) # 0
+print(A.get_output([1,1])) # 1
 
 ```
 
 You can also see tables with their values with the method `print_output_table`:
 ```python
-B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+B = DigitalInputer("B+(A*B)") # B OR (A AND B)
 B.print_output_table()
 """
 prints the following:
@@ -84,7 +84,7 @@ A B | OUT
 
 You can even get the table as a string with `get_output_table_print_ready`:
 ```python
-B = DigitalInputer("B+(A*B)") // B OR (A AND B)
+B = DigitalInputer("B+(A*B)") # B OR (A AND B)
 string_table = B.get_output_table_print_ready()
 print(string_table)
 """
@@ -100,8 +100,8 @@ A B | OUT
 What if you want to save it in a different format? You can get a python `dictionary` with the method `print_output_table`:
 
 ```python
-B = DigitalInputer("B+(A*B)") // B OR (A AND B)
-print(B.print_output_table()) // {(0, 1): 1, (1, 0): 0, (0, 0): 0, (1, 1): 1}
+B = DigitalInputer("B+(A*B)") # B OR (A AND B)
+print(B.print_output_table()) # {(0, 1): 1, (1, 0): 0, (0, 0): 0, (1, 1): 1}
 ```
 
 ### Operation Symbols 
